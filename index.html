@@ -59,7 +59,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-                <button class="hero-button" type="button">Заказать услугу</button>
+                <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
 
@@ -123,12 +123,23 @@
             <div class="container">
                 <h2 class="worksheet-title">Чем мы занимаемся</h2>
                 <ul class="worksheet-list">
-                    <li class="worksheet-list-item"><img src="./images/ipadkeyboard.jpg" alt="Работает за клавиатурой"
-                            width="370"></li>
-                    <li class="worksheet-list-item"><img src="./images/notebooksmartphone.jpg"
-                            alt="Работает на смартфоне и ноутбуке" width="370">
+                    <li class="worksheet-list-item">
+                        <img src="./images/ipadkeyboard.jpg" alt="Работает за клавиатурой" width="370">
+                        <div class="worksheet-list-item-overlay">
+                            <p class="worksheet-text-overlay">Десктопные приложения</p>
+                        </div>
                     </li>
-                    <li class="worksheet-list-item"><img src="./images/tablet.jpg" alt="Смотрит в планшет" width="370">
+                    <li class="worksheet-list-item">
+                        <img src="./images/notebooksmartphone.jpg" alt="Работает на смартфоне и ноутбуке" width="370">
+                        <div class="worksheet-list-item-overlay">
+                            <p class="worksheet-text-overlay">Мобильные приложения</p>
+                        </div>
+                    </li>
+                    <li class="worksheet-list-item">
+                        <img src="./images/tablet.jpg" alt="Смотрит в планшет" width="370">
+                        <div class="worksheet-list-item-overlay">
+                            <p class="worksheet-text-overlay">Дизайнерские решения</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -402,7 +413,7 @@
                     <li>
                         <a class="footer-social-link" href="">
                             <svg width="20" height="20">
-                                <use href="./images/icons.svg#linkedin-footer" linkedin-footer></use>
+                                <use href="./images/icons.svg#linkedin-footer"></use>
                             </svg>
                         </a>
                     </li>
@@ -411,6 +422,8 @@
         </div>
 
     </footer>
+
+    <script src="./js/modal.js"></script>
 
 </body>
 
