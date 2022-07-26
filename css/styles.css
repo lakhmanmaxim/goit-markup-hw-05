@@ -334,6 +334,12 @@ img {
     transition: opacity 250ms var(--transition-timing-function);     
 }
 
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
 .modal {
     position: absolute;
     top: 50%;
@@ -347,23 +353,34 @@ img {
     border-radius: 4px; 
 
     opacity: 1;
-    transition: 
-    transform 400ms var(--transition-timing-function),
-    opacity 400ms var(--transition-timing-function);
+
+    /* animation-name: modal;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-direction: alternate; */
+    transform: translate(-50%, -50%) scale(1, 1);
+    transition: transform 400ms var(--transition-timing-function);
+
 }
     
 .backdrop.is-hidden .modal {
     opacity: 0;
-    transform: translateX(-500%);
-    transition: transform 400ms var(--transition-timing-function),
-    opacity 400ms var(--transition-timing-function);
+    transform: translate(-50%, -50%) scale(0, 0);
 }
 
-.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
+/* @keyframes modal {
+    0% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+} */
 
 .button-close {
     position: absolute;
